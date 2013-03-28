@@ -1,0 +1,65 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Target BeforeTargets="build" Name="BeforeSolutionBuild">
+     <Message Importance="high" Text="Before Solution Build Targets Running" />
+  </Target>
+
+    <!-- Define build properties -->
+  <PropertyGroup>
+    <ManagementCmdletBinDirectory>.\Management\bin</ManagementCmdletBinDirectory>
+    <ManagementTestDirectory>.\Management.Test\bin</ManagementTestDirectory>
+    <ManagementTestAssemblyName>Microsoft.WindowsAzure.Management.Test.dll</ManagementTestAssemblyName>
+
+    <CloudServiceCmdletBinDirectory>.\Management.CloudService\bin</CloudServiceCmdletBinDirectory>
+    <CloudServiceTestDirectory>.\Management.CloudService.Test\bin</CloudServiceTestDirectory>
+    <CloudServiceTestAssemblyName>Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestAssemblyName>
+
+    <TestSettings>.\Local.testsettings</TestSettings>
+    <ScenarioTestDebug>.\Management.ScenarioTest\bin\Debug\Microsoft.WindowsAzure.Management.ScenarioTest.dll</ScenarioTestDebug>
+    <StorageScenarioTestDebug>Management.Storage.ScenarioTest\bin\Debug\CLITest.dll</StorageScenarioTestDebug>
+    <ManagementTestDebug>.\Management.Test\bin\Debug\Microsoft.WindowsAzure.Management.Test.dll</ManagementTestDebug>
+    <CloudServiceTestDebug>.\Management.CloudService.Test\bin\Debug\Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestDebug>
+    <ServiceManagementTestDebug>.\Management.ServiceManagement.Test\bin\Debug\Microsoft.WindowsAzure.Management.ServiceManagement.Test.dll</ServiceManagementTestDebug>
+    <SqlDatabaseTestDebug>.\Management.SqlDatabase.Test\bin\Debug\Microsoft.WindowsAzure.Management.SqlDatabase.Test.dll</SqlDatabaseTestDebug>
+    <StorageTestDebug>.\Management.Storage.Test\bin\Debug\Microsoft.WindowsAzure.Management.Storage.Test.dll</StorageTestDebug>
+    <SetupDirectory>..\setup\build</SetupDirectory>
+
+    <PublishDirectory>..\..\Publish</PublishDirectory>
+    <PackageDirectory>..\..\Package</PackageDirectory>
+    <BuildOutputDirectory>$(PublishDirectory)\Build</BuildOutputDirectory>
+    <SetupOutputDirectory>$(PublishDirectory)\Setup</SetupOutputDirectory>
+    <TestFilter>"!Functional&#x26;!Scenario"</TestFilter>
+    <ScenarioTestFilter>All</ScenarioTestFilter>
+    <TestOutputDirectory>$(PublishDirectory)\TestResults</TestOutputDirectory>
+	<DebugBuildConfig>Configuration=Debug;Platform=Any CPU</DebugBuildConfig>
+	<ReleaseBuildConfig>Configuration=Release;Platform=Any CPU</ReleaseBuildConfig>
+	<ReleaseSignedBuildConfig>Configuration=ReleaseSigned;Platform=Any CPU</ReleaseSignedBuildConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <CmdletSln Include=".\WindowsAzurePowershell.sln" />
+    <SetupSln Include="..\WindowsAzurePowershell\setup\azurepowershell.sln" />
+  </ItemGroup>
+
+  <!-- Run the unit tests -->
+  <Target Name="Test" AfterTargets="AfterSolutionBuild" Condition="'$(Configuration)' == 'Debug'">
+    <Message Importance="high" Text="Running tests..." />
+    <Message Importance="high" Text="You are required to have installed a version of Visual Studio with support for MSTest (and MSTest on your path)." />
+    <MakeDir Directories="$(TestOutputDirectory)" ContinueOnError="false" />
+    
+    <Message Importance="high" Text="Debug tests:" />
+    <Exec
+      Command="MSTest.exe /testcontainer:$(ManagementTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\ManagementDebug.trx"
+      ContinueOnError="false" />
+	<Exec
+      Command="MSTest.exe /testcontainer:$(CloudServiceTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\CloudServiceDebug.trx"
+      ContinueOnError="false" />
+	<Exec
+      Command="MSTest.exe /testcontainer:$(ServiceManagementTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\ServiceManagementDebug.trx"
+      ContinueOnError="false" />
+	<Exec
+      Command="MSTest.exe /testcontainer:$(SqlDatabaseTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\SqlDatabaseDebug.trx"
+      ContinueOnError="false" />
+	<Exec
+      Command="MSTest.exe /testcontainer:$(StorageTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\StorageDebug.trx"
+      ContinueOnError="false" />
+  </Target>
+</Project>
