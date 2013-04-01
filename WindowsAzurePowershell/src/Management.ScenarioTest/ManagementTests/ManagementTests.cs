@@ -33,6 +33,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ManagementTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Management)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSubscriptionWithDefaultSubscription()
         {
             RunPowerShellTest("Test-RemoveAzureSubscriptionWithDefaultSubscription");
@@ -41,6 +42,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ManagementTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Management)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSubscriptionWithNonExistingSubscription()
         {
             RunPowerShellTest("Test-RemoveAzureSubscriptionWithNonExistingSubscription");
@@ -49,6 +51,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ManagementTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Management)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSubscriptionWithEmptySubscription()
         {
             RunPowerShellTest("Test-RemoveAzureSubscriptionWithEmptySubscription");
@@ -57,6 +60,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ManagementTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Management)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSubscriptionWithWhatIf()
         {
             RunPowerShellTest("Test-RemoveAzureSubscriptionWithWhatIf");

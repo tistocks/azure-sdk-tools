@@ -1,0 +1,95 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<!-- 
+	   MSBuildAllProjects is used to specify all projects that this build is dependent on,
+	   this ensures that if this file changes it forces a rebuild 
+	-->
+	<PropertyGroup>
+		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFile)</MSBuildAllProjects>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<!-- If no Configuration/Patform was specified, default to Debug/AnyCPU -->
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ConfigurationType>$(Configuration)</ConfigurationType>
+	</PropertyGroup>
+	
+	<!-- Provide config for debug Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+	    <ConfigurationType>Debug</ConfigurationType>
+	</PropertyGroup>
+	
+	<!-- Provide config for release Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+	    <ConfigurationType>Release</ConfigurationType>
+	</PropertyGroup>
+	
+	<!-- Provide config for debug Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'DebugSigned' ">
+	    <ConfigurationType>Debug</ConfigurationType>
+        <SignAssembly>true</SignAssembly>
+	</PropertyGroup>
+
+	<!-- Provide config for release Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'ReleaseSigned' ">
+	    <ConfigurationType>Release</ConfigurationType>
+        <SignAssembly>true</SignAssembly>
+	</PropertyGroup>
+	
+    <Import Project="Shared.Common.BuildPaths.targets" />
+    <Import Project="Shared.Common.Tasks.targets" />
+
+	<ItemGroup>
+		<CoreProjectTypeFiles Include="$(ProjectTypeFilePath)\*.core" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<TestProjectTypeFiles Include="$(ProjectTypeFIlePath)\*.test" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<SampleProjectTypeFiles Include="$(ProjectTypeFIlePath)\*.sample" />
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<DropFile>$(SolutionDir)\drop.xml</DropFile>
+	</PropertyGroup>
+	
+	<Target Name="OrganizeNoDropXml"
+	        AfterTargets="Build"
+			Condition="!Exists('$(DropFile)')" >
+		<Message Importance="High" Text="Organizing Files (no drop.xml)" />
+		
+		<ExtractItemsFromFiles Files="@(CoreProjectTypeFiles)" >
+			<Output ItemName="CoreAssemblyPaths" TaskParameter="Results" />
+		</ExtractItemsFromFiles>
+		<ItemGroup>
+			<OrganizeFilesPaths Include="@(CoreAssemblyPaths->'%(RootDir)\%(Directory)')" />
+		</ItemGroup>
+
+		<DetermineDropLocations SourceRootPaths="@(OrganizeFilesPaths)"
+								SourceRoot="$(RootOutputPath)"
+								DestinationRoot="$(OrganizedPath)" >
+			<Output ItemName="OrganizeSourceFiles" TaskParameter="SourceFiles" />
+			<Output ItemName="OrganizeDestinationFiles" TaskParameter="DestinationFiles" />
+		</DetermineDropLocations>
+		
+		<Copy SourceFiles="@(OrganizeSourceFiles)" DestinationFiles="@(OrganizeDestinationFiles)" />
+	</Target>
+	
+	<Target Name="OrganizeDropXml"
+	        AfterTargets="Build"
+			Condition="Exists('$(DropFile)')" >
+		<Message Importance="High" Text="Organizing Files (via drop.xml)" />
+
+		<DetermineDropLocations DropFile="$(DropFile)"
+								SourceRoot="$(RootOutputPath)"
+								DestinationRoot="$(OrganizedPath)" >
+			<Output ItemName="OrganizeSourceFiles" TaskParameter="SourceFiles" />
+			<Output ItemName="OrganizeDestinationFiles" TaskParameter="DestinationFiles" />
+		</DetermineDropLocations>
+		
+		<Copy SourceFiles="@(OrganizeSourceFiles)" DestinationFiles="@(OrganizeDestinationFiles)" />
+	</Target>
+	
+</Project>

@@ -29,6 +29,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void GetStorageContainerWithoutContainerName()
         {
             RunPowerShellTest("Test-GetAzureStorageContainerWithoutContainerName");
@@ -37,6 +38,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void GetAzureStorageContainerWithPrefix()
         {
             RunPowerShellTest("Test-GetAzureStorageContainerWithPrefix");
@@ -45,6 +47,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewAzureStorageContainer()
         {
             RunPowerShellTest("Test-NewAzureStorageContainer");
@@ -53,6 +56,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewAzureStorageContainerWithPermission()
         {
             RunPowerShellTest("Test-NewAzureStorageContainerWithPermission");
@@ -61,6 +65,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewExistsAzureStorageContainer()
         {
             RunPowerShellTest("Test-NewExistsAzureStorageContainer");
@@ -69,6 +74,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewExistsAzureStorageContainerWithInvalidContainerName()
         {
             RunPowerShellTest("Test-NewExistsAzureStorageContainerWithInvalidContainerName");
@@ -77,6 +83,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void RemoveAzureStorageContainer()
         {
             RunPowerShellTest("Test-RemoveAzureStorageContainer");
@@ -85,6 +92,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void RemoveAzureStorageContainerByContainerPipeline()
         {
             RunPowerShellTest("Test-RemoveAzureStorageContainerByContainerPipeline");

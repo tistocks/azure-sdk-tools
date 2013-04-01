@@ -31,6 +31,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         }
 
         [TestMethod]
+        [TestCategory("Scenario")]
         public void CommonPowerShellSucceedingTest()
         {
             RunPowerShellTest(
@@ -46,6 +47,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         }
 
         [TestMethod]
+        [TestCategory("Scenario")]
         public void CommonPowerShellExceptionThrowingTest()
         {
             try
@@ -70,6 +72,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.CloudService)]
+        [TestCategory("Scenario")]
         public void TestStartAzureEmulatorTwice()
         {
             RunPowerShellTest("Test-StartAzureEmulatorTwice");

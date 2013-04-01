@@ -223,6 +223,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewContainerTest()
         {
             NewContainerTest(new PowerShellAgent());
@@ -236,6 +237,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void GetContainerTest()
         {
             GetContainerTest(new PowerShellAgent());
@@ -249,6 +251,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void RemoveContainerTest()
         {
             RemoveContainerTest(new PowerShellAgent());
@@ -262,6 +265,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void SetContainerACLTest()
         {
             SetContainerACLTest(new PowerShellAgent());
@@ -275,6 +279,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void UploadBlobTest()
         {
             UploadBlobTest(new PowerShellAgent(), CommonBlockFilePath, Microsoft.WindowsAzure.Storage.Blob.BlobType.BlockBlob);
@@ -289,6 +294,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void GetBlobTest()
         {
             GetBlobTest(new PowerShellAgent(), CommonBlockFilePath, Microsoft.WindowsAzure.Storage.Blob.BlobType.BlockBlob);
@@ -303,6 +309,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void DownloadBlobTest()
         {
             string downloadDirPath = Test.Data.Get("DownloadDirPath");
@@ -318,6 +325,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void RemoveBlobTest()
         {
             RemoveBlobTest(new PowerShellAgent(), CommonBlockFilePath, Microsoft.WindowsAzure.Storage.Blob.BlobType.BlockBlob);
@@ -332,6 +340,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void StartCopyBlobUsingName()
         {
             StartCopyBlobTest(new PowerShellAgent(), false);
@@ -345,6 +354,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void StartCopyBlobUsingUri()
         {
             StartCopyBlobTest(new PowerShellAgent(), true);
@@ -358,6 +368,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void GetBlobCopyStateTest()
         {
             CloudBlobUtil blobUtil = new CloudBlobUtil(CommonStorageAccount);
@@ -397,6 +408,7 @@ namespace CLITest.BVT
         [TestCategory(PsTag.FastEnv)]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void StopCopyBlobTest()
         {
             CloudBlobUtil blobUtil = new CloudBlobUtil(CommonStorageAccount);

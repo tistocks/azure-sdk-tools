@@ -39,6 +39,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.CloudService)]
+        [TestCategory("Scenario")]
         public void TestStartAzureServiceWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials { Start-AzureService $(Get-CloudServiceName) }");
@@ -47,6 +48,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.CloudService)]
+        [TestCategory("Scenario")]
         public void TestStartAzureServiceWithNonExistingService()
         {
             RunPowerShellTest("Test-StartAzureServiceWithNonExistingService");
@@ -55,6 +57,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.CloudService)]
+        [TestCategory("Scenario")]
         public void TestStartAzureServiceWithProductionDeployment()
         {
             RunPowerShellTest("Test-StartAzureServiceWithProductionDeployment");
@@ -63,6 +66,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.CloudService)]
+        [TestCategory("Scenario")]
         public void TestStartAzureServiceWithStagingDeployment()
         {
             RunPowerShellTest("Test-StartAzureServiceWithStagingDeployment");
@@ -71,6 +75,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.CloudServiceTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.CloudService)]
+        [TestCategory("Scenario")]
         public void TestStartAzureServiceWithEmptyDeployment()
         {
             RunPowerShellTest("Test-StartAzureServiceWithEmptyDeployment");

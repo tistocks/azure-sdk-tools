@@ -28,6 +28,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewAnonymousStorageContext()
         {
             RunPowerShellTest("Test-NewAnonymousStorageContext");
@@ -36,6 +37,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StorageTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Storage)]
+        [TestCategory("Scenario")]
         public void NewStorageContextWithNameAndKey()
         {
             RunPowerShellTest("Test-NewStorageContextWithNameAndKey");

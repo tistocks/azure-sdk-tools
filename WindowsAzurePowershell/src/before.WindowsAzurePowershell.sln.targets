@@ -39,17 +39,29 @@
     <SetupSln Include="..\WindowsAzurePowershell\setup\azurepowershell.sln" />
   </ItemGroup>
 
+  <Import Project="..\build\targets\Solution.CommonPre.targets" />
+  
   <!-- Run the unit tests -->
-  <Target Name="Test" AfterTargets="AfterSolutionBuild" Condition="'$(Configuration)' == 'Debug'">
+  <Target Name="Test" AfterTargets="AfterSolutionBuild" Condition="'$(Configuration)' == 'Debug' and '$(NoTestsOnBuild)' != 'true'">
     <Message Importance="high" Text="Running tests..." />
     <Message Importance="high" Text="You are required to have installed a version of Visual Studio with support for MSTest (and MSTest on your path)." />
     <MakeDir Directories="$(TestOutputDirectory)" ContinueOnError="false" />
     
-    <Message Importance="high" Text="Debug tests:" />
+	<ExtractItemsFromFiles Files="@(TestProjectTypeFiles)" >
+		<Output ItemName="TestAssemblyPaths" TaskParameter="Results" />
+	</ExtractItemsFromFiles>
+	
+    <Message Importance="high" Text="Debug tests: %(TestAssemblyPaths.FullPath)" />
     <Exec
-      Command="MSTest.exe /testcontainer:$(ManagementTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\ManagementDebug.trx"
+      Command="MSTest.exe /testcontainer:%(TestAssemblyPaths.FullPath) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\%(TestAssemblyPaths.Filename).trx"
       ContinueOnError="false" />
-	<Exec
+
+<!--
+    <Exec
+      Command="MSTest.exe /testcontainer:$(ScenarioTestDebug) /testsettings:$(TestSettings) /category:$(ScenarioTestFilter) /resultsfile:$(TestOutputDirectory)\Debug.trx"
+      ContinueOnError="false" />
+
+	  <Exec
       Command="MSTest.exe /testcontainer:$(CloudServiceTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\CloudServiceDebug.trx"
       ContinueOnError="false" />
 	<Exec
@@ -61,5 +73,6 @@
 	<Exec
       Command="MSTest.exe /testcontainer:$(StorageTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\StorageDebug.trx"
       ContinueOnError="false" />
+-->	  
   </Target>
 </Project>

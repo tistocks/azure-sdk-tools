@@ -83,6 +83,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnListAvailableWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials { Get-AzureStoreAddOn -ListAvailable }");
@@ -91,6 +92,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnListAvailableWithDefaultCountry()
         {
             RunPowerShellTest("Test-GetAzureStoreAddOnListAvailableWithDefaultCountry");
@@ -99,6 +101,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnListAvailableWithNoAddOns()
         {
             RunPowerShellTest("Test-GetAzureStoreAddOnListAvailableWithNoAddOns");
@@ -107,6 +110,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnListAvailableWithCountry()
         {
             RunPowerShellTest("Test-GetAzureStoreAddOnListAvailableWithCountry");
@@ -115,6 +119,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnListAvailableWithInvalidCountryName()
         {
             RunPowerShellTest("Test-GetAzureStoreAddOnListAvailableWithInvalidCountryName");
@@ -123,6 +128,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials { Get-AzureStoreAddOn Name }");
@@ -131,6 +137,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnWithNoAddOns()
         {
             RunPowerShellTest("Test-GetAzureStoreAddOnWithNoAddOns");
@@ -139,6 +146,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnWithOneAddOn()
         {
             PromptSetup();
@@ -150,6 +158,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnWithMultipleAddOns()
         {
             PromptSetup();
@@ -162,6 +171,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnWithExistingAddOn()
         {
             PromptSetup();
@@ -173,6 +183,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnCaseInsinsitive()
         {
             PromptSetup();
@@ -184,6 +195,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1094
         public void TestGetAzureStoreAddOnWithInvalidName()
         {
@@ -193,6 +205,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnValidNonExisting()
         {
             RunPowerShellTest("Test-GetAzureStoreAddOnValidNonExisting");
@@ -201,6 +214,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnWithAppService()
         {
             PromptSetup();
@@ -210,6 +224,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestGetAzureStoreAddOnPipedToRemoveAzureAddOn()
         {
             PromptSetup();
@@ -225,6 +240,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials { New-AzureStoreAddOn Name AddOn Plan \"West US\" }");
@@ -233,6 +249,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnMissingRequiredParameter()
         {
             RunPowerShellTest("Test-NewAzureStoreAddOnMissingRequiredParameter");
@@ -241,6 +258,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1094
         public void TestNewAzureStoreAddOnWithInvalidName()
         {
@@ -251,6 +269,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1094
         public void TestNewAzureStoreAddOnWithInvalidWindowsAzureLocation()
         {
@@ -261,6 +280,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnSuccessfull()
         {
             PromptSetup();
@@ -272,6 +292,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnWithExistingName()
         {
             PromptSetup();
@@ -281,6 +302,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1094
         public void TestNewAzureStoreAddOnWithInvalidAddOn()
         {
@@ -291,6 +313,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1094
         public void TestNewAzureStoreAddOnWithInvalidPlan()
         {
@@ -301,6 +324,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1094
         public void TestNewAzureStoreAddOnWithInvalidLocation()
         {
@@ -311,6 +335,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnWithInvalidPromoCode()
         {
             PromptSetup();
@@ -320,6 +345,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         [Ignore] // https://github.com/WindowsAzure/azure-sdk-tools/issues/1097
         public void TestNewAzureStoreAddOnWithValidPromoCode()
         {
@@ -332,6 +358,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnWithNo()
         {
             defaultAnswer = PromptAnswer.No;
@@ -342,6 +369,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestNewAzureStoreAddOnConfirmationMessage()
         {
             expectedDefaultChoices.Add(PowerShellCustomConfirmation.No);
@@ -363,6 +391,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials { Remove-AzureStoreAddOn Name }");
@@ -371,6 +400,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnSuccessfull()
         {
             PromptSetup();
@@ -380,6 +410,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnWithCasing()
         {
             PromptSetup();
@@ -389,6 +420,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnNotExisting()
         {
             RunPowerShellTest("Test-RemoveAzureStoreAddOnNotExisting");
@@ -397,6 +429,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnPipedFromGetAzureAddOn()
         {
             PromptSetup();
@@ -406,6 +439,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnMultiplePipedFromGetAzureAddOn()
         {
             PromptSetup();
@@ -415,6 +449,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.StoreTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Store)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureStoreAddOnWithNo()
         {
             promptChoices.AddRange(new int[] { PowerShellCustomConfirmation.Yes, PowerShellCustomConfirmation.No });

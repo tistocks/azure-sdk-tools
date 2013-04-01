@@ -1,3 +1,146 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<!-- 
+	   MSBuildAllProjects is used to specify all projects that this build is dependent on,
+	   this ensures that if this file changes it forces a rebuild 
+	-->
+	<PropertyGroup>
+		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFile)</MSBuildAllProjects>
+	</PropertyGroup>
 
+	<!-- Turn overflow/underflow checking on -->
+	<PropertyGroup>
+		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+	</PropertyGroup>
+
+	<!-- Set a flag to determine if this is a test project -->
+	<PropertyGroup>
+		<TestProject>false</TestProject>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(ProjectTypeGuids)' != '' and $(ProjectTypeGuids.Contains('3AC096D0-A1C2-E12C-1390-A8335801FDAB'))">
+		<TestProject>true</TestProject>
+	</PropertyGroup>
+
+	<!-- Determine if we are building from an IDE -->
+	<PropertyGroup>
+		<!-- Visual Studio IDE -->
+		<INVS Condition="'$(BuildingInsideVisualStudio)' == 'true' and '$(SharpDevelopBinPath)' == ''">true</INVS>
+		<!-- Sharp Develop IDE -->
+		<INSD Condition="'$(BuildingInsideVisualStudio)' == 'true' and '$(SharpDevelopBinPath)' != ''">true</INSD>
+		<INIDE Condition="'$(INVS)' == 'true' or '$(INSD)' == 'true'">true</INIDE>
+		<DefineConstants Condition="'$(INVS)' == 'true'">$(DefineConstants);INVS</DefineConstants>
+		<DefineConstants Condition="'$(INSD)' == 'true'">$(DefineConstants);INSD</DefineConstants>
+		<DefineConstants Condition="'$(INIDE)' == 'true'">$(DefineConstants);INIDE</DefineConstants>
+	</PropertyGroup>
+
+	<!-- Default project settings for all projects. -->
+	<PropertyGroup>
+		<!-- If no Configuration/Patform was specified, default to Debug/AnyCPU -->
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+
+		<!-- Stock for all projects -->
+		<ProductVersion>8.0.30703</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<FileAlignment>512</FileAlignment>
+		<TargetFrameworkProfile />
+		
+		<!-- Note: CODE_ANALYSIS is defined in Project.SourceAnalysis.Targets -->
+		<DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	    <ConfigurationType>$(Configuration)</ConfigurationType>
+
+		<RestorePackages>true</RestorePackages>
+
+		<!-- set up defaults for stylecop/fxcop-->
+<!--		
+		<RunCodeAnalysis Condition="'RunCodeAnalysis' != ''">true</RunCodeAnalysis>
+		<CodeAnalysisTreatWarningsAsErrors Condition="'$(INIDE)' != 'true'">false</CodeAnalysisTreatWarningsAsErrors>
+		<CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+-->
+		
+		<!-- get clean, stay clean with compiler warnings -->
+		<TreatWarningsAsErrors Condition="'$(INIDE)' != 'true'">true</TreatWarningsAsErrors>
+		
+	</PropertyGroup>
+
+	<!-- Set a flag to determine if this is a test project -->
+	<PropertyGroup>
+		<TestProject>false</TestProject>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(ProjectTypeGuids)' != '' and $(ProjectTypeGuids.Contains('3AC096D0-A1C2-E12C-1390-A8335801FDAB'))">
+		<TestProject>true</TestProject>
+	</PropertyGroup>
+
+	<!-- Provide config for debug Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+	    <ConfigurationType>Debug</ConfigurationType>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+	</PropertyGroup>
+	
+	<!-- Provide config for release Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+	    <ConfigurationType>Release</ConfigurationType>
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+	</PropertyGroup>
+	
+	<!-- Provide config for debug Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'DebugSigned' ">
+	    <ConfigurationType>Debug</ConfigurationType>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>$(DefineConstants);DEBUG;SIGN</DefineConstants>
+        <SignAssembly>true</SignAssembly>
+	</PropertyGroup>
+	
+	<!-- Provide config for release Any CPU -->
+	<PropertyGroup Condition=" '$(Configuration)' == 'ReleaseSigned' ">
+	    <ConfigurationType>Release</ConfigurationType>
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<DefineConstants>$(DefineConstants);SIGN</DefineConstants>
+        <SignAssembly>true</SignAssembly>
+	</PropertyGroup>
+
+    <Import Project="Shared.Common.BuildPaths.targets" />
+	
+	<PropertyGroup>
+		<OutputPath>$(RootPath)\Bin\Unsigned\$(ConfigurationType)\$(AssemblyName)</OutputPath>
+		<OutputPath Condition="'$(SignAssembly)' == 'true'" >$(RootPath)\Bin\Signed\$(ConfigurationType)\$(AssemblyName)</OutputPath>
+	</PropertyGroup>
+
+	<Target Name="ProjectTypeFile"
+	        AfterTargets="Build">
+		<MakeDir Condition="!Exists('$(ProjectTypeFilePath)')" Directories="$(ProjectTypeFilePath)" />
+		<Delete Files="$(ProjectTypeFilePath)\$(AssemblyName).*" />
+		<WriteLinesToFile Condition="'$(TestProject)' == 'true'" 
+		                  File="$(ProjectTypeFilePath)\$(AssemblyName).test"
+						  Lines="%(MainAssembly.FullPath)"
+						  Overwrite="true"
+                          Encoding="Utf-8" />
+		<WriteLinesToFile Condition="'$(SampleProject)' == 'true'" 
+		                  File="$(ProjectTypeFilePath)\$(AssemblyName).sample"
+						  Lines="%(MainAssembly.FullPath)"
+						  Overwrite="true"
+                          Encoding="Utf-8" />
+		<WriteLinesToFile Condition="'$(TestProject)' != 'true' and '$(SampleProject)' != 'true'" 
+		                  File="$(ProjectTypeFilePath)\$(AssemblyName).core"
+						  Lines="%(MainAssembly.FullPath)"
+						  Overwrite="true"
+                          Encoding="Utf-8" />
+	</Target>
+	
+	<PropertyGroup Condition="'$(SignAssembly)' == 'true'">
+		<DelaySign Condition="'$(DelaySign)' == ''">true</DelaySign>
+
+		<SignKeyPath>$(BuildFilesPath)</SignKeyPath>
+		<SignKeyPath Condition="'$(BuildToolsPath)' != ''">$(BuildToolsPath)\CodeSigning</SignKeyPath>
+		<AssemblyOriginatorKeyFile>$(SignKeyPath)\PublicKey.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
 </Project>

@@ -9,6 +9,8 @@ TestResults
 *.suo
 *.orig
 *.ncrunchsolution
+/Bin
+/Organized
 /Publish
 /Package
 /WindowsAzurePowershell/src/packages

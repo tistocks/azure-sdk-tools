@@ -1,0 +1,32 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<!-- 
+	   MSBuildAllProjects is used to specify all projects that this build is dependent on,
+	   this ensures that if this file changes it forces a rebuild 
+	-->
+	<PropertyGroup>
+		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFile)</MSBuildAllProjects>
+	</PropertyGroup>
+	
+	<!-- Setup some important paths that are useful to the build system -->
+	<PropertyGroup>
+		<RootPath>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\..\..))</RootPath>
+		<BuildRoot>$(MSBuildThisFileDirectory)..</BuildRoot>
+		<TargetsDirectory>$(MSBuildThisFileDirectory)</TargetsDirectory>
+		<BuildFilesPath>$(BuildRoot)\BuildFiles</BuildFilesPath>
+	</PropertyGroup>
+
+	<!-- Set Basic Paths -->
+	<PropertyGroup>
+	    <RootOutputPath>$(RootPath)\Bin\Unsigned\$(ConfigurationType)</RootOutputPath>
+		<RootOutputPath Condition="'$(SignAssembly)' == 'true'">$(RootPath)\Bin\Signed\$(ConfigurationType)</RootOutputPath>
+		<RootObjPath>$(RootPath)\Obj</RootObjPath>
+		<BaseIntermediateOutputPath>$(RootObjPath)\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
+		<IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+        <GenPath>$(RootObjPath)</GenPath>
+		<ProjectTypeFilePath>$(GenPath)\ProjectTypeFiles\Unsigned\$(ConfigurationType)</ProjectTypeFilePath>
+		<ProjectTypeFilePath Condition="'$(SignAssembly)' == 'true'">$(GenPath)\ProjectTypeFiles\Signed\$(ConfigurationType)</ProjectTypeFilePath>
+		<OrganizedPath>$(RootPath)\Organized\Unsigned\$(ConfigurationType)</OrganizedPath>
+		<OrganizedPath Condition="'$(SignAssembly)' == 'true'">$(RootPath)\Organized\Signed\$(ConfigurationType)</OrganizedPath>
+	</PropertyGroup>
+
+</Project>

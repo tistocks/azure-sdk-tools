@@ -50,6 +50,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureWebsiteWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials {Remove-AzureWebsite $(Get-WebsiteName) }");
@@ -58,6 +59,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureServiceWithValidName()
         {
             RunPowerShellTest("Test-RemoveAzureServiceWithValidName");
@@ -66,6 +68,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureServiceWithNonExistingName()
         {
             RunPowerShellTest("Test-RemoveAzureServiceWithNonExistingName");
@@ -74,6 +77,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureServiceWithWhatIf()
         {
             RunPowerShellTest("Test-RemoveAzureServiceWithWhatIf");
@@ -86,6 +90,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestGetAzureWebsiteLogWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials { Get-AzureWebsiteLog -Tail -Name $(Get-WebsiteName) }");
@@ -94,6 +99,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestGetAzureWebsiteLogTail()
         {
             RunPowerShellTest("Test-GetAzureWebsiteLogTail");
@@ -102,6 +108,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestGetAzureWebsiteLogTailPath()
         {
             RunPowerShellTest("Test-GetAzureWebsiteLogTailPath");
@@ -110,6 +117,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestGetAzureWebsiteLogTailUriEncoding()
         {
             RunPowerShellTest("Test-GetAzureWebsiteLogTailUriEncoding");
@@ -118,6 +126,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestGetAzureWebsiteLogListPath()
         {
             RunPowerShellTest("Test-GetAzureWebsiteLogListPath");
@@ -130,6 +139,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestGetAzureWebsite()
         {
             RunPowerShellTest("Test-GetAzureWebsite");
@@ -142,6 +152,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestSetAzureWebsiteDiagnosticSettings()
         {
             RunPowerShellTest("Test-SetAzureWebsiteDiagnosticSettings");
@@ -150,6 +161,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestSetAzureWebsiteMultipleDiagnosticSettings()
         {
             RunPowerShellTest("Test-SetAzureWebsiteMultipleDiagnosticSettings");
@@ -158,6 +170,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.WebsitesTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.Websites)]
+        [TestCategory("Scenario")]
         public void TestSetAzureWebsiteWithInvalidValues()
         {
             RunPowerShellTest("Test-SetAzureWebsiteWithInvalidValues");

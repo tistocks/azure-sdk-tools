@@ -37,6 +37,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void ListAzureSBLocationWithValidCredentials()
         {
             RunPowerShellTest("Test-ListAzureSBLocation");
@@ -48,6 +49,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestListAzureSBLocation1()
         {
             RunPowerShellTest("Test-ListAzureSBLocation1");
@@ -63,6 +65,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithEmptyNamespaces()
         {
             RunPowerShellTest("Test-GetAzureSBNamespaceWithEmptyNamespaces");
@@ -71,6 +74,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithOneNamespace()
         {
             RunPowerShellTest("Test-GetAzureSBNamespaceWithOneNamespace");
@@ -79,6 +83,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithMultipleNamespaces()
         {
             RunPowerShellTest("Test-GetAzureSBNamespaceWithMultipleNamespaces");
@@ -87,6 +92,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithValidExisitingNamespace()
         {
             RunPowerShellTest("Test-GetAzureSBNamespaceWithValidExisitingNamespace");
@@ -95,6 +101,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithValidNonExisitingNamespace()
         {
             RunPowerShellTest("Test-GetAzureSBNamespaceWithValidNonExisitingNamespace");
@@ -103,6 +110,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespacePipedToRemoveAzureSBNamespace()
         {
             RunPowerShellTest("Test-GetAzureSBNamespacePipedToRemoveAzureSBNamespace");
@@ -111,6 +119,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithWebsites()
         {
             RunPowerShellTest("Test-GetAzureSBNamespaceWithWebsites");
@@ -123,6 +132,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestNewAzureSBNamespaceWithValidNewNamespace()
         {
             RunPowerShellTest("Test-NewAzureSBNamespaceWithValidNewNamespace");
@@ -131,6 +141,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestNewAzureSBNamespaceWithValidExistingNamespace()
         {
             RunPowerShellTest("Test-NewAzureSBNamespaceWithValidExistingNamespace");
@@ -139,6 +150,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestNewAzureSBNamespaceWithInvalidLocation()
         {
             RunPowerShellTest("Test-NewAzureSBNamespaceWithInvalidLocation");
@@ -156,6 +168,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestNewAzureSBNamespaceWithWebsite()
         {
             RunPowerShellTest("Test-NewAzureSBNamespaceWithWebsite");
@@ -168,6 +181,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSBNamespaceWithExistingNamespace()
         {
             RunPowerShellTest("Test-RemoveAzureSBNamespaceWithExistingNamespace");
@@ -176,6 +190,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSBNamespaceWithNonExistingNamespace()
         {
             RunPowerShellTest("Test-RemoveAzureSBNamespaceWithNonExistingNamespace");
@@ -191,6 +206,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSBNamespaceInputPiping()
         {
             RunPowerShellTest("Test-RemoveAzureSBNamespaceInputPiping");
@@ -199,6 +215,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSBNamespaceWhatIf()
         {
             RunPowerShellTest("Test-RemoveAzureSBNamespaceWhatIf");
@@ -207,6 +224,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSBNamespaceWhatIfError()
         {
             RunPowerShellTest("Test-RemoveAzureSBNamespaceWhatIfError");
@@ -219,6 +237,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBLocationWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials {Get-AzureSBLocation}");
@@ -227,6 +246,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestGetAzureSBNamespaceWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials {Get-AzureSBNamespace}");
@@ -235,6 +255,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestNewAzureSBNamespaceWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials {New-AzureSBNamespace $(Get-NamespaceName) $(Get-DefaultServiceBusLocation)}");
@@ -243,6 +264,7 @@ namespace Microsoft.WindowsAzure.Management.ScenarioTest.ServiceBusTests
         [TestMethod]
         [TestCategory(Category.All)]
         [TestCategory(Category.ServiceBus)]
+        [TestCategory("Scenario")]
         public void TestRemoveAzureSBNamespaceWithInvalidCredentials()
         {
             RunPowerShellTest("Test-WithInvalidCredentials {Remove-AzureSBNamespace \"AnyName\"}");
