@@ -11,6 +11,7 @@ TestResults
 *.ncrunchsolution
 /Bin
 /Organized
+/Prepared
 /Publish
 /Package
 /WindowsAzurePowershell/src/packages
