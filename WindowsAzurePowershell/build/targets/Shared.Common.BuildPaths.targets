@@ -23,10 +23,25 @@
 		<BaseIntermediateOutputPath>$(RootObjPath)\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
 		<IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
         <GenPath>$(RootObjPath)</GenPath>
+		
+		<!-- Project Type Files are used to categorize projects by type -->
 		<ProjectTypeFilePath>$(GenPath)\ProjectTypeFiles\Unsigned\$(ConfigurationType)</ProjectTypeFilePath>
 		<ProjectTypeFilePath Condition="'$(SignAssembly)' == 'true'">$(GenPath)\ProjectTypeFiles\Signed\$(ConfigurationType)</ProjectTypeFilePath>
-		<OrganizedPath>$(RootPath)\Organized\Unsigned\$(ConfigurationType)</OrganizedPath>
-		<OrganizedPath Condition="'$(SignAssembly)' == 'true'">$(RootPath)\Organized\Signed\$(ConfigurationType)</OrganizedPath>
+		
+		<!-- The Orgnaized Directory are where files are droped after full build, it should look like you want the files on the client -->
+		<RootOrganizedPath>$(RootPath)\Organized</RootOrganizedPath>
+		<OrganizedPath>$(RootOrganizedPath)\Unsigned\$(ConfigurationType)</OrganizedPath>
+		<OrganizedPath Condition="'$(SignAssembly)' == 'true'">$(RootOrganizedPath)\Signed\$(ConfigurationType)</OrganizedPath>
+		
+		<!-- The Prepared Path are where pre-install steups are preformed (such as creating an IntegrationPack or an SCVMMAddIn -->
+		<RootPreparedPath>$(RootPath)\Prepared</RootPreparedPath>
+		<PreparedPath>$(RootPreparedPath)\Unsigned\$(ConfigurationType)</PreparedPath>
+		<PreparedPath Condition="'$(SignAssembly)' == 'true'">$(RootPreparedPath)\Signed\$(ConfigurationType)</PreparedPath>
+
+		<!-- The Packaged Path is where the final files (ready for the customer) are placed.  This would generally be an MSI or some install package -->
+		<RootPackagedPath>$(RootPath)\Packaged</RootPackagedPath>
+		<PackagedPath>$(RootPackagedPath)\Unsigned\$(ConfigurationType)</PackagedPath>
+		<PackagedPath Condition="'$(SignAssembly)' == 'true'">$(RootPackagedPath)\Signed\$(ConfigurationType)</PackagedPath>
 	</PropertyGroup>
 
 </Project>

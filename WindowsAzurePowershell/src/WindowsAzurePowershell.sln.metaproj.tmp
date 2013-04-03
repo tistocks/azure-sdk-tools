@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions;ValidateProjects">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore\*" Condition="'$(ImportByWildcardBeforeSolution)' != 'false' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore')" />
+  <Import Project="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\before.WindowsAzurePowershell.sln.targets" Condition="exists('C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\before.WindowsAzurePowershell.sln.targets')" />
+  <PropertyGroup Condition=" '$(Configuration)' == '' ">
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '' ">
+    <Platform>Any CPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(AspNetConfiguration)' == '') ">
+    <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionDir>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>WindowsAzurePowershell.sln</SolutionFileName>
+    <SolutionName>WindowsAzurePowershell</SolutionName>
+    <SolutionPath>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\WindowsAzurePowershell.sln</SolutionPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and ('$(MSBuildToolsVersion)' == '3.5' or '$(MSBuildToolsVersion)' == '3.0')">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '4.0'">v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B7FD03F6-98BC-4F54-9A14-0455E579FCD4}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{C7C619E8-BB9B-43B6-9592-EC7F4ED3B55C}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{37455286-D8A7-4E0C-8B4D-C517D20C641A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DA1432AF-D6B5-47A1-8B74-CCD740683E0F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{08CF7DA7-0392-4A19-B79B-E1FF67CDB81A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{D6F470A6-7395-4B8B-9D29-44DF0EC8F624}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{A3965B66-5A3E-4B8C-9574-28E5958D4828}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj" BuildProjectInSolution="True">Debug|AnyCPU<ProjectDependency Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" /><ProjectDependency Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" /><ProjectDependency Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{ED57ECAF-AD30-4C7A-99A6-8757A83B19F0}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{E1CA72BA-8374-45F6-904D-FD34ECDF5B6F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{58A78F29-8C0C-4A5E-893E-3953C0F29C8A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{73820CBC-F4EB-4C5E-B4F0-CC4A93FBF157}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{80496B7B-068A-4A1E-B0BB-4B1FFF3FA616}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4900EC4E-8DEB-4412-9108-0BC52F81D457}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{BC420543-C04E-4BF3-96E1-CD81B823BDD7}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CE97967B-7479-43B9-9561-776232AC5D47}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{0A513849-2690-4D07-8DE7-0ACE39645D12}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4BC0E3D3-6EDD-43AA-8F15-DCFED8ACC93D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="" />
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B7FD03F6-98BC-4F54-9A14-0455E579FCD4}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{C7C619E8-BB9B-43B6-9592-EC7F4ED3B55C}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{37455286-D8A7-4E0C-8B4D-C517D20C641A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DA1432AF-D6B5-47A1-8B74-CCD740683E0F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{08CF7DA7-0392-4A19-B79B-E1FF67CDB81A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{D6F470A6-7395-4B8B-9D29-44DF0EC8F624}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{A3965B66-5A3E-4B8C-9574-28E5958D4828}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU<ProjectDependency Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" /><ProjectDependency Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" /><ProjectDependency Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{ED57ECAF-AD30-4C7A-99A6-8757A83B19F0}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{E1CA72BA-8374-45F6-904D-FD34ECDF5B6F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{58A78F29-8C0C-4A5E-893E-3953C0F29C8A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{73820CBC-F4EB-4C5E-B4F0-CC4A93FBF157}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{80496B7B-068A-4A1E-B0BB-4B1FFF3FA616}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4900EC4E-8DEB-4412-9108-0BC52F81D457}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{BC420543-C04E-4BF3-96E1-CD81B823BDD7}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CE97967B-7479-43B9-9561-776232AC5D47}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{0A513849-2690-4D07-8DE7-0ACE39645D12}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4BC0E3D3-6EDD-43AA-8F15-DCFED8ACC93D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj" BuildProjectInSolution="True">DebugSigned|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="" />
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B7FD03F6-98BC-4F54-9A14-0455E579FCD4}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{C7C619E8-BB9B-43B6-9592-EC7F4ED3B55C}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{37455286-D8A7-4E0C-8B4D-C517D20C641A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DA1432AF-D6B5-47A1-8B74-CCD740683E0F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{08CF7DA7-0392-4A19-B79B-E1FF67CDB81A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{D6F470A6-7395-4B8B-9D29-44DF0EC8F624}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{A3965B66-5A3E-4B8C-9574-28E5958D4828}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj" BuildProjectInSolution="True">Release|AnyCPU<ProjectDependency Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" /><ProjectDependency Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" /><ProjectDependency Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{ED57ECAF-AD30-4C7A-99A6-8757A83B19F0}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{E1CA72BA-8374-45F6-904D-FD34ECDF5B6F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{58A78F29-8C0C-4A5E-893E-3953C0F29C8A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{73820CBC-F4EB-4C5E-B4F0-CC4A93FBF157}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{80496B7B-068A-4A1E-B0BB-4B1FFF3FA616}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4900EC4E-8DEB-4412-9108-0BC52F81D457}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{BC420543-C04E-4BF3-96E1-CD81B823BDD7}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CE97967B-7479-43B9-9561-776232AC5D47}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{0A513849-2690-4D07-8DE7-0ACE39645D12}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4BC0E3D3-6EDD-43AA-8F15-DCFED8ACC93D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="" />
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B7FD03F6-98BC-4F54-9A14-0455E579FCD4}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{C7C619E8-BB9B-43B6-9592-EC7F4ED3B55C}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{37455286-D8A7-4E0C-8B4D-C517D20C641A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DA1432AF-D6B5-47A1-8B74-CCD740683E0F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{08CF7DA7-0392-4A19-B79B-E1FF67CDB81A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{D6F470A6-7395-4B8B-9D29-44DF0EC8F624}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{A3965B66-5A3E-4B8C-9574-28E5958D4828}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU<ProjectDependency Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" /><ProjectDependency Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" /><ProjectDependency Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{ED57ECAF-AD30-4C7A-99A6-8757A83B19F0}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{E1CA72BA-8374-45F6-904D-FD34ECDF5B6F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{58A78F29-8C0C-4A5E-893E-3953C0F29C8A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{73820CBC-F4EB-4C5E-B4F0-CC4A93FBF157}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{80496B7B-068A-4A1E-B0BB-4B1FFF3FA616}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4900EC4E-8DEB-4412-9108-0BC52F81D457}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{BC420543-C04E-4BF3-96E1-CD81B823BDD7}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CE97967B-7479-43B9-9561-776232AC5D47}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{0A513849-2690-4D07-8DE7-0ACE39645D12}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4BC0E3D3-6EDD-43AA-8F15-DCFED8ACC93D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj" BuildProjectInSolution="True">ReleaseSigned|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="" />
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter\*" Condition="'$(ImportByWildcardBeforeSolution)' != 'false' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter')" />
+  <Import Project="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\after.WindowsAzurePowershell.sln.targets" Condition="exists('C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\after.WindowsAzurePowershell.sln.targets')" />
+  <Target Name="Build" />
+  <Target Name="Rebuild" />
+  <Target Name="Clean" />
+  <Target Name="Publish" />
+</Project>

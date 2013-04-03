@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions;ValidateProjects">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore\*" Condition="'$(ImportByWildcardBeforeSolution)' != 'false' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore')" />
+  <Import Project="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\before.azurepowershell.sln.targets" Condition="exists('C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\before.azurepowershell.sln.targets')" />
+  <PropertyGroup Condition=" '$(Configuration)' == '' ">
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '' ">
+    <Platform>Mixed Platforms</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(AspNetConfiguration)' == '') ">
+    <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionDir>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>azurepowershell.sln</SolutionFileName>
+    <SolutionName>azurepowershell</SolutionName>
+    <SolutionPath>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.sln</SolutionPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and ('$(MSBuildToolsVersion)' == '3.5' or '$(MSBuildToolsVersion)' == '3.0')">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '4.0'">v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{36D6E303-E057-4963-A093-C7AAE0FD92B3}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.wixproj" BuildProjectInSolution="True">Debug|x86<ProjectDependency Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\Setup\Setup.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Mixed Platforms') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{36D6E303-E057-4963-A093-C7AAE0FD92B3}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.wixproj" BuildProjectInSolution="True">Debug|x86<ProjectDependency Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\Setup\Setup.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{36D6E303-E057-4963-A093-C7AAE0FD92B3}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.wixproj" BuildProjectInSolution="True">Debug|x86<ProjectDependency Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\Setup\Setup.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{36D6E303-E057-4963-A093-C7AAE0FD92B3}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.wixproj" BuildProjectInSolution="True">Release|x86<ProjectDependency Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\Setup\Setup.csproj" BuildProjectInSolution="True">Release|x86</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Mixed Platforms') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{36D6E303-E057-4963-A093-C7AAE0FD92B3}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.wixproj" BuildProjectInSolution="True">Release|x86<ProjectDependency Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\Setup\Setup.csproj" BuildProjectInSolution="True">Release|x86</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{36D6E303-E057-4963-A093-C7AAE0FD92B3}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\azurepowershell.wixproj" BuildProjectInSolution="True">Release|x86<ProjectDependency Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{EA5BD11B-10B3-433D-A250-92AE76669D8D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\Setup\Setup.csproj" BuildProjectInSolution="True">Release|x86</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter\*" Condition="'$(ImportByWildcardBeforeSolution)' != 'false' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter')" />
+  <Import Project="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\after.azurepowershell.sln.targets" Condition="exists('C:\Temp\Azure\OneSdk\WindowsAzurePowershell\setup\after.azurepowershell.sln.targets')" />
+  <Target Name="Build" />
+  <Target Name="Rebuild" />
+  <Target Name="Clean" />
+  <Target Name="Publish" />
+</Project>

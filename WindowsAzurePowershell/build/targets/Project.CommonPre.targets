@@ -13,7 +13,7 @@
 	</PropertyGroup>
 
 	<!-- Set a flag to determine if this is a test project -->
-	<PropertyGroup>
+	<PropertyGroup Condition="'$(TestProject)' == ''" >
 		<TestProject>false</TestProject>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(ProjectTypeGuids)' != '' and $(ProjectTypeGuids.Contains('3AC096D0-A1C2-E12C-1390-A8335801FDAB'))">
@@ -63,14 +63,7 @@
 		<!-- get clean, stay clean with compiler warnings -->
 		<TreatWarningsAsErrors Condition="'$(INIDE)' != 'true'">true</TreatWarningsAsErrors>
 		
-	</PropertyGroup>
-
-	<!-- Set a flag to determine if this is a test project -->
-	<PropertyGroup>
-		<TestProject>false</TestProject>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(ProjectTypeGuids)' != '' and $(ProjectTypeGuids.Contains('3AC096D0-A1C2-E12C-1390-A8335801FDAB'))">
-		<TestProject>true</TestProject>
+		<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>
 	</PropertyGroup>
 
 	<!-- Provide config for debug Any CPU -->

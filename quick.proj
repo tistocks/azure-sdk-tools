@@ -1,0 +1,122 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ProjectTypeFilePath>C:\Temp\Azure\OneSdk\obj\ProjectTypeFiles\Unsigned\Debug</ProjectTypeFilePath>
+		<SolutionDir>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src</SolutionDir>
+<!--		<MSBuildToolsPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319</MSBuildToolsPath> -->
+	</PropertyGroup>
+	
+    <UsingTask TaskName="ExtractItemsFromFiles" TaskFactory="CodeTaskFactory" AssemblyFile="C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Build.Tasks.v4.0.dll">
+        <ParameterGroup>
+            <Files ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+			<Results ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+        </ParameterGroup>
+        <Task>
+            <Reference Include="System.Core" />
+            <Using Namespace="System" />
+            <Using Namespace="System.IO" />
+            <Using Namespace="System.Net" />
+            <Using Namespace="Microsoft.Build.Framework" />
+            <Using Namespace="Microsoft.Build.Utilities" />
+            <Code Type="Fragment" Language="cs">
+            <![CDATA[
+				List<ITaskItem> results = new List<ITaskItem>();
+				foreach (var file in Files)
+				{
+					string path = file.GetMetadata("FullPath");
+					var lines = File.ReadAllLines(path);
+					foreach (var line in lines)
+					{
+						if (line != string.Empty)
+						{
+							var taskItem = new TaskItem(line);
+							results.Add(taskItem);
+						}
+					}
+				}
+				Results = results.ToArray();
+            ]]>
+            </Code>
+        </Task>
+    </UsingTask>
+
+	
+    <UsingTask TaskName="GetChildItems" TaskFactory="CodeTaskFactory" AssemblyFile="C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Build.Tasks.v4.0.dll">
+        <ParameterGroup>
+            <Items ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+			<Results ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+        </ParameterGroup>
+        <Task>
+            <Reference Include="System.Core" />
+            <Using Namespace="System" />
+            <Using Namespace="System.IO" />
+            <Using Namespace="System.Net" />
+            <Using Namespace="Microsoft.Build.Framework" />
+            <Using Namespace="Microsoft.Build.Utilities" />
+            <Code Type="Fragment" Language="cs">
+            <![CDATA[
+				List<ITaskItem> results = new List<ITaskItem>();
+				foreach (var item in Items)
+				{
+					string path = item.GetMetadata("FullPath");
+					if (Directory.Exists(path))
+					{
+						var files = Directory.GetFiles(path);
+						results.AddRange(from f in files
+									   select new TaskItem(f));
+					}
+				}
+				Results = results.ToArray();
+            ]]>
+            </Code>
+        </Task>
+    </UsingTask>
+	
+	<ItemGroup>
+		<CoreProjectTypeFiles Include="$(ProjectTypeFilePath)\*.core" />
+	</ItemGroup>
+	
+	<Target Name="OrganizeNoDropXml"
+	        AfterTargets="Build"
+			Condition="!Exists('SolutionDir\drop.xml')" >
+		<ExtractItemsFromFiles Files="@(CoreProjectTypeFiles)" >
+			<Output ItemName="CoreAssemblyPaths" TaskParameter="Results" />
+		</ExtractItemsFromFiles>
+		<Message Importance="High" Text="Organizing Output Files" />
+		<ItemGroup>
+			<OrganizeFilesPaths Include="@(CoreAssemblyPaths->'%(RootDir)\%(Directory)')" />
+		</ItemGroup>
+
+	    <Message Text="Input: %(CoreAssemblyPaths.FullPath)" />
+
+
+		<GetChildItems Items="@(OrganizeFilesPaths)" >
+            <Output TaskParameter="Results" ItemName="OrganizeFiles" />
+        </GetChildItems>
+		
+		
+	    <Message Text="Output: %(OrganizeFiles.FullPath)" />
+  
+		<!--
+		
+		
+		<ItemGroup>
+			<OrganizeFiles Include="@(OrganizeFilesPaths->'%(FullPath)**\*.*')" />
+		</ItemGroup>
+		
+		<Message Importance="High" Text="Files: @(FilesToOrganize)" />
+		<Message Importance="High" Text="Files: @(OrganizeFiles)" />
+		
+		<AppendToItems Items="@(OrganizeFilesPaths)"
+		               Additional="**\*.*">
+			<Output ItemName="OrganizeFiles" TaskParameter="Results" />
+	    </AppendToItems>
+		<ItemGroup>
+			<FilesToOrganize Include="@(OrganizeFiles)" />
+		</ItemGroup>
+		<Copy SourceFiles="@(OrganizeFiles)" DestinationFolder="C:\Temp\Organize">
+			<Output ItemName="Dumped" TaskParameter="CopiedFiles" />
+		</Copy>
+		<Message Importance="High" Text="Files: @(FilesToOrganize)" />
+		-->
+	</Target>
+</Project>

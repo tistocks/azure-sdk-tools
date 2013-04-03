@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions;ValidateProjects" DefaultTargets="Build">
+  <PropertyGroup>
+    <SDK35ToolsPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\</SDK35ToolsPath>
+    <MSBuildToolsPath32>C:\Windows\Microsoft.NET\Framework\v4.0.30319\</MSBuildToolsPath32>
+    <MSBuildToolsRoot>C:\Windows\Microsoft.NET\Framework\</MSBuildToolsRoot>
+    <FrameworkSDKRoot>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\</FrameworkSDKRoot>
+    <MSBuildRuntimeVersion>4.0.30319</MSBuildRuntimeVersion>
+    <SDK40ToolsPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\</SDK40ToolsPath>
+    <VCTargetsPath>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v110\</VCTargetsPath>
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+    <WindowsSDK80Path>C:\Program Files (x86)\Windows Kits\8.0\</WindowsSDK80Path>
+    <VCTargetsPath10>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\</VCTargetsPath10>
+    <VCTargetsPath11>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\</VCTargetsPath11>
+    <ManagementCmdletBinDirectory>.\Management\bin</ManagementCmdletBinDirectory>
+    <ManagementTestDirectory>.\Management.Test\bin</ManagementTestDirectory>
+    <ManagementTestAssemblyName>Microsoft.WindowsAzure.Management.Test.dll</ManagementTestAssemblyName>
+    <CloudServiceCmdletBinDirectory>.\Management.CloudService\bin</CloudServiceCmdletBinDirectory>
+    <CloudServiceTestDirectory>.\Management.CloudService.Test\bin</CloudServiceTestDirectory>
+    <CloudServiceTestAssemblyName>Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestAssemblyName>
+    <TestSettings>.\Local.testsettings</TestSettings>
+    <SetupDirectory>..\setup\build</SetupDirectory>
+    <PublishDirectory>..\..\Publish</PublishDirectory>
+    <PackageDirectory>..\..\Package</PackageDirectory>
+    <BuildOutputDirectory>..\..\Publish\Build</BuildOutputDirectory>
+    <SetupOutputDirectory>..\..\Publish\Setup</SetupOutputDirectory>
+    <TestFilter>"!Functional&amp;!Scenario"</TestFilter>
+    <ScenarioTestFilter>All</ScenarioTestFilter>
+    <TestOutputDirectory>..\..\Publish\TestResults</TestOutputDirectory>
+    <DebugBuildConfig>Configuration=Debug;Platform=Any CPU</DebugBuildConfig>
+    <ReleaseBuildConfig>Configuration=Release;Platform=Any CPU</ReleaseBuildConfig>
+    <ReleaseSignedBuildConfig>Configuration=ReleaseSigned;Platform=Any CPU</ReleaseSignedBuildConfig>
+    <MSBuildAllProjects>;Solution.CommonPre.targets;Shared.Common.BuildPaths.targets;Shared.Common.Tasks.targets;Solution.Drop.targets;Solution.CommonPost.targets</MSBuildAllProjects>
+    <Configuration>Debug</Configuration>
+    <Platform>Any CPU</Platform>
+    <ConfigurationType>Debug</ConfigurationType>
+    <RootPath>C:\Temp\Azure\OneSdk</RootPath>
+    <BuildRoot>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\build\targets\..</BuildRoot>
+    <TargetsDirectory>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\build\targets\</TargetsDirectory>
+    <BuildFilesPath>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\build\targets\..\BuildFiles</BuildFilesPath>
+    <RootOutputPath>C:\Temp\Azure\OneSdk\Bin\Unsigned\Debug</RootOutputPath>
+    <RootObjPath>C:\Temp\Azure\OneSdk\Obj</RootObjPath>
+    <BaseIntermediateOutputPath>C:\Temp\Azure\OneSdk\Obj\Debug\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>C:\Temp\Azure\OneSdk\Obj\Debug\</IntermediateOutputPath>
+    <GenPath>C:\Temp\Azure\OneSdk\Obj</GenPath>
+    <ProjectTypeFilePath>C:\Temp\Azure\OneSdk\Obj\ProjectTypeFiles\Unsigned\Debug</ProjectTypeFilePath>
+    <RootOrganizedPath>C:\Temp\Azure\OneSdk\Organized</RootOrganizedPath>
+    <OrganizedPath>C:\Temp\Azure\OneSdk\Organized\Unsigned\Debug</OrganizedPath>
+    <RootPreparedPath>C:\Temp\Azure\OneSdk\Prepared</RootPreparedPath>
+    <PreparedPath>C:\Temp\Azure\OneSdk\Prepared\Unsigned\Debug</PreparedPath>
+    <RootPackagedPath>C:\Temp\Azure\OneSdk\Packaged</RootPackagedPath>
+    <PackagedPath>C:\Temp\Azure\OneSdk\Packaged\Unsigned\Debug</PackagedPath>
+    <AspNetConfiguration>Debug</AspNetConfiguration>
+    <SolutionDir>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>WindowsAzurePowershell.sln</SolutionFileName>
+    <SolutionName>WindowsAzurePowershell</SolutionName>
+    <SolutionPath>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\WindowsAzurePowershell.sln</SolutionPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B7FD03F6-98BC-4F54-9A14-0455E579FCD4}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{C7C619E8-BB9B-43B6-9592-EC7F4ED3B55C}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{37455286-D8A7-4E0C-8B4D-C517D20C641A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{DA1432AF-D6B5-47A1-8B74-CCD740683E0F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{08CF7DA7-0392-4A19-B79B-E1FF67CDB81A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{D6F470A6-7395-4B8B-9D29-44DF0EC8F624}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{A3965B66-5A3E-4B8C-9574-28E5958D4828}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj" BuildProjectInSolution="True">Debug|AnyCPU<ProjectDependency Project="{CD5AA507-F5EF-473D-855B-84B91A1ABE54}" /><ProjectDependency Project="{DDF5D225-C9C5-42B7-BDB5-2C3646E479AA}" /><ProjectDependency Project="{B6F73AB3-1207-4B52-B90A-065CD5E107EB}" /></ProjectConfiguration>
+  <ProjectConfiguration Project="{ED57ECAF-AD30-4C7A-99A6-8757A83B19F0}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{E1CA72BA-8374-45F6-904D-FD34ECDF5B6F}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{58A78F29-8C0C-4A5E-893E-3953C0F29C8A}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{73820CBC-F4EB-4C5E-B4F0-CC4A93FBF157}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{80496B7B-068A-4A1E-B0BB-4B1FFF3FA616}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4900EC4E-8DEB-4412-9108-0BC52F81D457}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{BC420543-C04E-4BF3-96E1-CD81B823BDD7}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CE97967B-7479-43B9-9561-776232AC5D47}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{0A513849-2690-4D07-8DE7-0ACE39645D12}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{4BC0E3D3-6EDD-43AA-8F15-DCFED8ACC93D}" AbsolutePath="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+    <DropFile>C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\\drop.xml</DropFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <CmdletSln Include=".\WindowsAzurePowershell.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <SetupSln Include="..\WindowsAzurePowershell\setup\azurepowershell.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj.metaproj">
+      <ToolsVersion>4.0</ToolsVersion>
+      <SkipNonexistentProjects>Build</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=Any CPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="BeforeSolutionBuild">
+    <Message Importance="high" Text="Before Solution Build Targets Running" />
+  </Target>
+  <Target Name="OrganizeNoDropXml" Condition="!Exists('$(DropFile)')">
+    <Message Importance="High" Text="Organizing Files (no drop.xml)" />
+    <ExtractItemsFromFiles Files="@(CoreProjectTypeFiles)">
+      <Output TaskParameter="Results" ItemName="CoreAssemblyPaths" />
+    </ExtractItemsFromFiles>
+    <Message Importance="High" Text="Found Core Project Assembly: %(CoreAssemblyPaths.FullPath)" />
+    <Message Importance="High" Text="Organizing Core Project Directory: %(OrganizeFilesPaths.FullPath)" />
+    <DetermineDropLocations SourceRootPaths="@(OrganizeFilesPaths)" SourceRoot="$(RootOutputPath)" DestinationRoot="$(OrganizedPath)">
+      <Output TaskParameter="SourceFiles" ItemName="OrganizeSourceFiles" />
+      <Output TaskParameter="DestinationFiles" ItemName="OrganizeDestinationFiles" />
+    </DetermineDropLocations>
+    <Copy SourceFiles="@(OrganizeSourceFiles)" DestinationFiles="@(OrganizeDestinationFiles)" />
+  </Target>
+  <Target Name="OrganizeDropXml" Condition="Exists('$(DropFile)')">
+    <Message Importance="High" Text="Organizing Files (via drop.xml)" />
+    <DetermineDropLocations DropFile="$(DropFile)" SourceRoot="$(RootOutputPath)" DestinationRoot="$(OrganizedPath)">
+      <Output TaskParameter="SourceFiles" ItemName="OrganizeSourceFiles" />
+      <Output TaskParameter="DestinationFiles" ItemName="OrganizeDestinationFiles" />
+    </DetermineDropLocations>
+    <Copy SourceFiles="@(OrganizeSourceFiles)" DestinationFiles="@(OrganizeDestinationFiles)" />
+  </Target>
+  <Target Name="Test" Condition="'$(Configuration)' == 'Debug' and '$(NoTestsOnBuild)' != 'true'">
+    <Message Importance="high" Text="Running tests..." />
+    <Message Importance="high" Text="You are required to have installed a version of Visual Studio with support for MSTest (and MSTest on your path)." />
+    <MakeDir ContinueOnError="false" Directories="$(TestOutputDirectory)" />
+    <ExtractItemsFromFiles Files="@(TestProjectTypeFiles)">
+      <Output TaskParameter="Results" ItemName="TestAssemblyPaths" />
+    </ExtractItemsFromFiles>
+    <Message Importance="high" Text="Debug tests: %(TestAssemblyPaths.FullPath)" />
+    <Exec ContinueOnError="false" Command="MSTest.exe /testcontainer:%(TestAssemblyPaths.FullPath) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\%(TestAssemblyPaths.Filename).trx" />
+  </Target>
+  <Target Name="AfterSolutionBuild">
+    <Message Importance="high" Text="After Solution Build Targets Running" />
+  </Target>
+  <Target Name="Prepare">
+    <RebaseItems Items="@(PreparedFileSources)" OriginalRoot="$(OrganizedPath)" NewRoot="$(PreparedPath)">
+      <Output TaskParameter="Results" ItemName="PreparedFileDestinations" />
+    </RebaseItems>
+    <Copy SourceFiles="@(PreparedFileSources)" DestinationFiles="@(PreparedFileDestinations)" />
+  </Target>
+  <Target Name="Build" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Projects="@(ProjectReference)" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ValidateProjects">
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService.Test&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService.Test&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService.Test&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService.Test&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase.Test&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase.Test&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase.Test&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.SqlDatabase.Test&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.CloudService&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ServiceManagement.Additions&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ServiceManagement.Additions&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ServiceManagement.Additions&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ServiceManagement.Additions&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.Test&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.Test&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.Test&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.Test&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ConsoleAppUtils&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ConsoleAppUtils&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ConsoleAppUtils&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;ConsoleAppUtils&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement.Test&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement.Test&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement.Test&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.ServiceManagement.Test&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Sync&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Sync&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Sync&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Sync&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;VhdManagement&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;VhdManagement&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;VhdManagement&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;VhdManagement&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Utilities&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Utilities&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Utilities&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Utilities&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test.Utilities&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test.Utilities&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test.Utilities&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Test.Utilities&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.MsTestLib&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.MsTestLib&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.MsTestLib&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.MsTestLib&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.StorageTestLib&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.StorageTestLib&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.StorageTestLib&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.StorageTestLib&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;Debug|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'DebugSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;DebugSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;Release|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+    <Warning Condition=" ('$(Configuration)' == 'ReleaseSigned') and ('$(Platform)' == 'x86') " Text="The project configuration for project &quot;Management.Storage.ScenarioTest&quot; was not specified in the solution file for the solution configuration &quot;ReleaseSigned|x86&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" />
+  </Target>
+  <Target Name="ValidateToolsVersions">
+    <Error Condition="'$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')" Text="The tools version &quot;$(MSBuildToolsVersion)&quot; of the solution does not support building projects with a different tools version." Code="MSB4149" HelpKeyword="MSBuild.SolutionToolsVersionDoesNotSupportProjectToolsVersion" />
+  </Target>
+  <Target Name="ValidateSolutionConfiguration">
+    <Error Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')" Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" />
+    <Warning Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')" Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" />
+    <Message Condition="'$(CurrentSolutionConfigurationContents)' != ''" Text="Building solution configuration &quot;$(Configuration)|$(Platform)&quot;." />
+  </Target>
+  <Target Name="Clean">
+    <MSBuild Projects="@(ProjectReference-&gt;Reverse())" Targets="Clean" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
+  </Target>
+  <Target Name="Rebuild" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Publish">
+    <MSBuild Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
+  </Target>
+  <Target Name="Management" Outputs="@(ManagementBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ManagementBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management:Rebuild" Outputs="@(ManagementBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ManagementBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management\Management.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Test" Outputs="@(Management_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Test:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Test:Rebuild" Outputs="@(Management_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Test:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test\Management.Test.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_CloudService_Test" Outputs="@(Management_CloudService_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_CloudService_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_CloudService_Test:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_CloudService_Test:Rebuild" Outputs="@(Management_CloudService_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_CloudService_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_CloudService_Test:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService.Test\Management.CloudService.Test.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_SqlDatabase" Outputs="@(Management_SqlDatabaseBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_SqlDatabaseBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_SqlDatabase:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_SqlDatabase:Rebuild" Outputs="@(Management_SqlDatabaseBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_SqlDatabaseBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_SqlDatabase:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase\Management.SqlDatabase.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_SqlDatabase_Test" Outputs="@(Management_SqlDatabase_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_SqlDatabase_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_SqlDatabase_Test:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_SqlDatabase_Test:Rebuild" Outputs="@(Management_SqlDatabase_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_SqlDatabase_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_SqlDatabase_Test:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.SqlDatabase.Test\Management.SqlDatabase.Test.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_CloudService" Outputs="@(Management_CloudServiceBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_CloudServiceBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_CloudService:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_CloudService:Rebuild" Outputs="@(Management_CloudServiceBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_CloudServiceBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_CloudService:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.CloudService\Management.CloudService.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="ServiceManagement_Additions" Outputs="@(ServiceManagement_AdditionsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ServiceManagement_AdditionsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ServiceManagement_Additions:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="ServiceManagement_Additions:Rebuild" Outputs="@(ServiceManagement_AdditionsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ServiceManagement_AdditionsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ServiceManagement_Additions:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ServiceManagement.Additions\ServiceManagement.Additions.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage" Outputs="@(Management_StorageBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_StorageBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage:Rebuild" Outputs="@(Management_StorageBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_StorageBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage\Management.Storage.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_Test" Outputs="@(Management_Storage_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_Test:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_Test:Rebuild" Outputs="@(Management_Storage_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_Test:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.Test\Management.Storage.Test.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_ScenarioTest" Outputs="@(Management_ScenarioTestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj.metaproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="4.0" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_ScenarioTestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_ScenarioTest:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj.metaproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="4.0" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
+  </Target>
+  <Target Name="Management_ScenarioTest:Rebuild" Outputs="@(Management_ScenarioTestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj.metaproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="4.0" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_ScenarioTestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_ScenarioTest:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ScenarioTest\Management.ScenarioTest.csproj.metaproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="4.0" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
+  </Target>
+  <Target Name="ConsoleAppUtils" Outputs="@(ConsoleAppUtilsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ConsoleAppUtilsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ConsoleAppUtils:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="ConsoleAppUtils:Rebuild" Outputs="@(ConsoleAppUtilsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ConsoleAppUtilsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ConsoleAppUtils:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\ConsoleAppUtils\ConsoleAppUtils.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_ServiceManagement" Outputs="@(Management_ServiceManagementBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_ServiceManagementBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_ServiceManagement:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_ServiceManagement:Rebuild" Outputs="@(Management_ServiceManagementBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_ServiceManagementBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_ServiceManagement:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement\Management.ServiceManagement.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_ServiceManagement_Test" Outputs="@(Management_ServiceManagement_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_ServiceManagement_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_ServiceManagement_Test:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_ServiceManagement_Test:Rebuild" Outputs="@(Management_ServiceManagement_TestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_ServiceManagement_TestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_ServiceManagement_Test:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.ServiceManagement.Test\Management.ServiceManagement.Test.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Sync" Outputs="@(SyncBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SyncBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Sync:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Sync:Rebuild" Outputs="@(SyncBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SyncBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Sync:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Sync\Sync.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="VhdManagement" Outputs="@(VhdManagementBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="VhdManagementBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="VhdManagement:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="VhdManagement:Rebuild" Outputs="@(VhdManagementBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="VhdManagementBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="VhdManagement:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\VhdManagement\VhdManagement.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Utilities" Outputs="@(Management_UtilitiesBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_UtilitiesBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Utilities:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Utilities:Rebuild" Outputs="@(Management_UtilitiesBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_UtilitiesBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Utilities:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Utilities\Management.Utilities.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Test_Utilities" Outputs="@(Management_Test_UtilitiesBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Test_UtilitiesBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Test_Utilities:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Test_Utilities:Rebuild" Outputs="@(Management_Test_UtilitiesBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Test_UtilitiesBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Test_Utilities:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Test.Utilities\Management.Test.Utilities.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_MsTestLib" Outputs="@(Management_Storage_MsTestLibBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_MsTestLibBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_MsTestLib:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_MsTestLib:Rebuild" Outputs="@(Management_Storage_MsTestLibBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_MsTestLibBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_MsTestLib:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.MsTestLib\Management.Storage.MsTestLib.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_StorageTestLib" Outputs="@(Management_Storage_StorageTestLibBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_StorageTestLibBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_StorageTestLib:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_StorageTestLib:Rebuild" Outputs="@(Management_Storage_StorageTestLibBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_StorageTestLibBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_StorageTestLib:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.StorageTestLib\Management.Storage.StorageTestLib.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_ScenarioTest" Outputs="@(Management_Storage_ScenarioTestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_ScenarioTestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_ScenarioTest:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Management_Storage_ScenarioTest:Rebuild" Outputs="@(Management_Storage_ScenarioTestBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Management_Storage_ScenarioTestBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Management_Storage_ScenarioTest:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Temp\Azure\OneSdk\WindowsAzurePowershell\src\Management.Storage.ScenarioTest\Management.Storage.ScenarioTest.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+</Project>

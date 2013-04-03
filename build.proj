@@ -15,13 +15,7 @@
     <CloudServiceTestAssemblyName>Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestAssemblyName>
 
     <TestSettings>.\WindowsAzurePowershell\src\Local.testsettings</TestSettings>
-    <ScenarioTestDebug>.\WindowsAzurePowershell\src\Management.ScenarioTest\bin\Debug\Microsoft.WindowsAzure.Management.ScenarioTest.dll</ScenarioTestDebug>
-    <StorageScenarioTestDebug>WindowsAzurePowershell\src\Management.Storage.ScenarioTest\bin\Debug\CLITest.dll</StorageScenarioTestDebug>
-    <ManagementTestDebug>.\WindowsAzurePowershell\src\Management.Test\bin\Debug\Microsoft.WindowsAzure.Management.Test.dll</ManagementTestDebug>
-    <CloudServiceTestDebug>.\WindowsAzurePowershell\src\Management.CloudService.Test\bin\Debug\Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestDebug>
-    <ServiceManagementTestDebug>.\WindowsAzurePowershell\src\Management.ServiceManagement.Test\bin\Debug\Microsoft.WindowsAzure.Management.ServiceManagement.Test.dll</ServiceManagementTestDebug>
-    <SqlDatabaseTestDebug>.\WindowsAzurePowershell\src\Management.SqlDatabase.Test\bin\Debug\Microsoft.WindowsAzure.Management.SqlDatabase.Test.dll</SqlDatabaseTestDebug>
-    <StorageTestDebug>.\WindowsAzurePowershell\src\Management.Storage.Test\bin\Debug\Microsoft.WindowsAzure.Management.Storage.Test.dll</StorageTestDebug>
+
     <SetupDirectory>.\WindowsAzurePowershell\setup\build</SetupDirectory>
 
     <PublishDirectory>.\Publish</PublishDirectory>
@@ -31,8 +25,10 @@
     <TestFilter>"!Functional&#x26;!Scenario"</TestFilter>
     <ScenarioTestFilter>All</ScenarioTestFilter>
     <TestOutputDirectory>$(PublishDirectory)\TestResults</TestOutputDirectory>
+
 	<DebugBuildConfig>Configuration=Debug;Platform=Any CPU</DebugBuildConfig>
 	<ReleaseBuildConfig>Configuration=Release;Platform=Any CPU</ReleaseBuildConfig>
+	<DebugSignedBuildConfig>Configuration=DebugSigned;Platform=Any CPU</DebugSignedBuildConfig>
 	<ReleaseSignedBuildConfig>Configuration=ReleaseSigned;Platform=Any CPU</ReleaseSignedBuildConfig>
   </PropertyGroup>
   <ItemGroup>
@@ -49,20 +45,29 @@
       Targets="Clean"
       Properties="$(DebugBuildConfig)"
       ContinueOnError="false" />
+	  
+	<MSBuild
+      Projects="@(CmdletSln)"
+      Targets="Clean"
+      Properties="$(DebugSignedBuildConfig)"
+      ContinueOnError="false" />
+
     <MSBuild
+      Projects="@(CmdletSln)"
+      Targets="Clean"
+      Properties="$(ReleaseBuildConfig)"
+      ContinueOnError="false" />
+
+	<MSBuild
       Projects="@(CmdletSln)"
       Targets="Clean"
       Properties="$(ReleaseSignedBuildConfig)"
       ContinueOnError="false" />
+	  
     <MSBuild
       Projects="@(SetupSln)"
       Targets="Clean"
       Properties="$(ReleaseBuildConfig)"
-      ContinueOnError="false" />
-	<MSBuild
-      Projects="@(SetupSln)"
-      Targets="Clean"
-      Properties="$(DebugBuildConfig)"
       ContinueOnError="false" />
 
     <!-- Delete the publish files -->
@@ -97,6 +102,16 @@
       Projects="@(CmdletSln)"
       Targets="Build"
       Properties="$(DebugBuildConfig)"
+      ContinueOnError="false" />
+    <MSBuild
+      Projects="@(CmdletSln)"
+      Targets="Build"
+      Properties="$(ReleaseBuildConfig)"
+      ContinueOnError="false" />
+    <MSBuild
+      Projects="@(CmdletSln)"
+      Targets="Build"
+      Properties="$(DebugSignedBuildConfig)"
       ContinueOnError="false" />
     <MSBuild
       Projects="@(CmdletSln)"
@@ -163,6 +178,9 @@
   <Target Name="FullCoreBuild"
           DependsOnTargets="Clean;BuildDebug;BuildReleaseSigned" />
 		  
+  <Target Name="FullMealCoreBuild"
+		  DependsOnTargets="Clean;BuildDebug;BuildRelease;BuildDebugSigned;BuildReleaseSigned" />
+		  
   <Target Name="FullSetupBuild"
           DependsOnTargets="BuildSetupDebug;BuildSetup" />
   
@@ -170,6 +188,10 @@
   <Target
     Name="Full"
     DependsOnTargets="FullCoreBuild;FullSetupBuild" />
+	
+  <Target Name="FMD"
+		  DependsOnTargets="FullMealCoreBuild;FullSetupBuild" />
+		  
   
   <!-- Run Full switch with scenario tests -->
   <Target
@@ -195,4 +217,24 @@
       Properties="$(DebugBuildConfig)"
       ContinueOnError="false" />
   </Target>
+  
+  <!-- Build the Cmdlets in ReleaseSigned configuration -->
+  <Target Name="BuildDebugSigned">
+    <Message Importance="high" Text="Building Cmdlets in ReleaseSigned config..." />
+    <MSBuild
+      Projects="@(CmdletSln)"
+      Targets="Build"
+      Properties="$(DebugSignedBuildConfig)"
+      ContinueOnError="false" />
+  </Target>
+
+  <!-- Build the Cmdlets in Debug configuration -->
+  <Target Name="BuildRelease">
+    <Message Importance="high" Text="Building Cmdlets in Debug config..." />
+    <MSBuild
+      Projects="@(CmdletSln)"
+      Targets="Build"
+      Properties="$(ReleseBuildConfig)"
+      ContinueOnError="false" />
+  </Target>  
 </Project>

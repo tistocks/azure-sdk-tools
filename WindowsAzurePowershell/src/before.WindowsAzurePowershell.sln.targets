@@ -14,13 +14,7 @@
     <CloudServiceTestAssemblyName>Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestAssemblyName>
 
     <TestSettings>.\Local.testsettings</TestSettings>
-    <ScenarioTestDebug>.\Management.ScenarioTest\bin\Debug\Microsoft.WindowsAzure.Management.ScenarioTest.dll</ScenarioTestDebug>
-    <StorageScenarioTestDebug>Management.Storage.ScenarioTest\bin\Debug\CLITest.dll</StorageScenarioTestDebug>
-    <ManagementTestDebug>.\Management.Test\bin\Debug\Microsoft.WindowsAzure.Management.Test.dll</ManagementTestDebug>
-    <CloudServiceTestDebug>.\Management.CloudService.Test\bin\Debug\Microsoft.WindowsAzure.Management.CloudService.Test.dll</CloudServiceTestDebug>
-    <ServiceManagementTestDebug>.\Management.ServiceManagement.Test\bin\Debug\Microsoft.WindowsAzure.Management.ServiceManagement.Test.dll</ServiceManagementTestDebug>
-    <SqlDatabaseTestDebug>.\Management.SqlDatabase.Test\bin\Debug\Microsoft.WindowsAzure.Management.SqlDatabase.Test.dll</SqlDatabaseTestDebug>
-    <StorageTestDebug>.\Management.Storage.Test\bin\Debug\Microsoft.WindowsAzure.Management.Storage.Test.dll</StorageTestDebug>
+
     <SetupDirectory>..\setup\build</SetupDirectory>
 
     <PublishDirectory>..\..\Publish</PublishDirectory>
@@ -41,38 +35,4 @@
 
   <Import Project="..\build\targets\Solution.CommonPre.targets" />
   
-  <!-- Run the unit tests -->
-  <Target Name="Test" AfterTargets="AfterSolutionBuild" Condition="'$(Configuration)' == 'Debug' and '$(NoTestsOnBuild)' != 'true'">
-    <Message Importance="high" Text="Running tests..." />
-    <Message Importance="high" Text="You are required to have installed a version of Visual Studio with support for MSTest (and MSTest on your path)." />
-    <MakeDir Directories="$(TestOutputDirectory)" ContinueOnError="false" />
-    
-	<ExtractItemsFromFiles Files="@(TestProjectTypeFiles)" >
-		<Output ItemName="TestAssemblyPaths" TaskParameter="Results" />
-	</ExtractItemsFromFiles>
-	
-    <Message Importance="high" Text="Debug tests: %(TestAssemblyPaths.FullPath)" />
-    <Exec
-      Command="MSTest.exe /testcontainer:%(TestAssemblyPaths.FullPath) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\%(TestAssemblyPaths.Filename).trx"
-      ContinueOnError="false" />
-
-<!--
-    <Exec
-      Command="MSTest.exe /testcontainer:$(ScenarioTestDebug) /testsettings:$(TestSettings) /category:$(ScenarioTestFilter) /resultsfile:$(TestOutputDirectory)\Debug.trx"
-      ContinueOnError="false" />
-
-	  <Exec
-      Command="MSTest.exe /testcontainer:$(CloudServiceTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\CloudServiceDebug.trx"
-      ContinueOnError="false" />
-	<Exec
-      Command="MSTest.exe /testcontainer:$(ServiceManagementTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\ServiceManagementDebug.trx"
-      ContinueOnError="false" />
-	<Exec
-      Command="MSTest.exe /testcontainer:$(SqlDatabaseTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\SqlDatabaseDebug.trx"
-      ContinueOnError="false" />
-	<Exec
-      Command="MSTest.exe /testcontainer:$(StorageTestDebug) /testsettings:$(TestSettings) /category:$(TestFilter) /resultsfile:$(TestOutputDirectory)\StorageDebug.trx"
-      ContinueOnError="false" />
--->	  
-  </Target>
 </Project>
